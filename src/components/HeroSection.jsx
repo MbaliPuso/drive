@@ -13,9 +13,16 @@ const HeroSection = () => {
             <div className='container'>
                 <div className='row hero-content'>
                   <div className='col-lg-6'>
-                  <h1>THE FUTURE OF DRIVING</h1>
-                  <p>Get a brand new car today with just a few clicks - Smart, Quick & Easy - With Drive!</p>
-                  <button className='btn btn-warning apply-now'><Link to="/apply-now">Apply Now</Link></button>
+                  <div className='hero-section-heading'>
+                    <h1>THE FUTURE OF DRIVING</h1>
+                  </div>
+                  <div className='hero-section-p'>
+                    <p>Get a brand new car today with just a few clicks - Smart, Quick & Easy - With Drive!</p>
+                  </div>
+                  <div className='hero-section-button'>
+                  <button><Link className='hero-section-link' to="/apply-now">Apply Now</Link></button>
+                  </div>
+                  
                   </div>
                 </div>
             </div>

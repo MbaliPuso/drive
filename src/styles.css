@@ -6,6 +6,7 @@ Body {
     overflow-x: hidden;
 }
 
+/* hero section styling */
 .hero-section {
     height: 100vh;
     width: 100vw;
@@ -18,13 +19,121 @@ Body {
     color: whitesmoke;      
 }
 
-.navbar {
+/* navbar section */
+.navigation {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-nav {
+    flex: 1;
     display: flex;
-    justify-content: end;
+    justify-content: space-evenly;
+  }
+  
+  .call-now {
+    background-color: #E0B500;
+    border-radius: 10px;
+    border: none;
+  }
+  
+  .navbar-brand {
+    flex-grow: 1;
+  }
+  
+  .navbar-toggler {
+    margin-left: auto;
+  }
+
+  /* Adjust layout for larger screens */
+  @media (min-width: 992px) {
+    .navbar .call-now {
+      margin-right: auto;
+    }
+    .navbar-nav {
+      margin-left: auto;
+    }
+  }
+
+  /* Adjust for medium and smaller screens */
+  @media (max-width: 991px) {
+    .navbar .call-now {
+      margin-left: auto;
+    }
+  
+    .navbar .navbar-toggler {
+      margin-left: auto;
+    }
+  }
+
+  .apply-now {
+    background-color: #E0B500;
+    border-radius: 10px;
+  }
+  
+  .nav-item a {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  
+  .nav-item a:hover {
+    color: #E0B500;
+    text-decoration: underline;
+  }
+  
+  /* hero section */
+  .hero-section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
     align-items: center;
-    padding: 1rem;
-    color: #fff;
-}
+    justify-content: left;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: whitesmoke;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-section-heading {
+    font-family: "Lexend", Sans-serif;
+    font-size: 55px;
+    font-weight: 700;
+    box-shadow: 2px 4px 9x rgba(0, 0 , 0, 0.32);
+    line-height: 1;
+  }
+
+  .hero-section-p {
+    box-sizing: border-box;
+  }
+  
+  .hero-section-button {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #EBC035;
+    border-radius: 6px;
+    padding: 11px 70px 13px 70px;
+    text-align: center;
+    transition: all 0.3s;
+  }
+
+  .hero-section-link {
+    text-decoration: none;
+    color: #0D2412;
+  }
+
+  @media (max-width: 767px) {
+    .hero-section-button {
+        padding: 11px 55px 12px 55px;
+    }
+  }
+  
 
 .featured-vehicles {
     text-align: center;
