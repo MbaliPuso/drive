@@ -177,3 +177,106 @@ Body {
     max-width: 100%;
     height: 30px;
 }
+
+/* how it works section */
+.drive-heading {
+    margin-bottom: 40px;
+}
+
+.how-it-works {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* .how-it-works .card {
+    border: none;
+} */
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 18px;
+}
+
+/* pros and cons section */
+.payment-pros-cons {
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .pros-cons {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .pros-cons .cons, .pros-cons .pros {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .pros-cons .cons:hover, .pros-cons .pros:hover {
+    transform: translateY(-10px);
+  }
+  
+  .pros-cons h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+  }
+  
+  .list-group-item {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    font-size: 1.1em;
+  }
+  
+  .list-group-item i {
+    margin-right: 10px;
+    font-size: 1.3em;
+  }
+  
+  .text-danger {
+    color: #dc3545 !important;
+  }
+  
+  .text-success {
+    color: #28a745 !important;
+  }
+
+  /* footer section */
+  .footer h5 {
+    color: #E0B500;
+  }
+  
+  .footer p,
+  .footer a {
+    color: whitesmoke;
+    font-size: 1rem;
+  }
+  
+  .footer a {
+    transition: color 0.3s;
+  }
+  
+  .footer a:hover {
+    color: #E0B500;
+  }
+  
+  .footer iframe {
+    border-radius: 8px;
+    margin-top: 15px;
+  }
+  
+
+
+
