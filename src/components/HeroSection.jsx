@@ -13,14 +13,14 @@ const HeroSection = () => {
             <div className='container'>
                 <div className='row hero-content'>
                   <div className='col-lg-6'>
-                  <div className='hero-section-heading'>
-                    <h1>THE FUTURE OF DRIVING</h1>
+                  <div>
+                    <h1 className='hero-section-heading'>THE FUTURE OF DRIVING</h1>
                   </div>
-                  <div className='hero-section-p'>
-                    <p>Get a brand new car today with just a few clicks - Smart, Quick & Easy - With Drive!</p>
+                  <div>
+                    <p className='hero-section-p'>Get a brand new car today with just a few clicks - Smart, Quick & Easy - With Drive!</p>
                   </div>
-                  <div className='hero-section-button'>
-                  <button><Link className='hero-section-link' to="/apply-now">Apply Now</Link></button>
+                  <div>
+                  <button className='hero-section-button'><Link className='hero-section-link' to="/apply-now">Apply Now</Link></button>
                   </div>
                   
                   </div>

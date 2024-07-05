@@ -121,6 +121,7 @@ Body {
     padding: 11px 70px 13px 70px;
     text-align: center;
     transition: all 0.3s;
+    border: none;
   }
 
   .hero-section-link {
