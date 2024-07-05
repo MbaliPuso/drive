@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
+import '../styles.css'
 import Navbar from "../components/NavigationBar";
+import Footer from '../components/Footer';
 import viewOne from "../assets/s-presso.png";
 import viewTwo from "../assets/celerio.png";
 import viewThree from "../assets/suzuki-swift.png";
@@ -24,7 +26,8 @@ const AllCars = () => {
         petrolConsumption: '4.4L/100km',
         engineCapacity: '1.0L',
         offers: 'Insurance, Maintenance, Services, Tracking, Tyres, Roadside Assist',
-        price: 'R5,799'
+        price1500km: 'R5,699',
+        price2500km: 'R6,299'
     },
     {
         image: viewTwo,
@@ -33,7 +36,8 @@ const AllCars = () => {
         petrolConsumption: '4.2L/100km',
         engineCapacity: '1.0L',
         offers: 'Insurance, Maintenance, Services, Tracking, Tyres, Roadside Assist',
-        price: 'R7,499'
+        price1500km: 'R7,499',
+        price2500km: 'R7,999'
     },
     {
         image: viewThree,
@@ -42,7 +46,8 @@ const AllCars = () => {
         petrolConsumption: '4.9L/100km',
         engineCapacity: '1.2L',
         offers: 'Insurance, Maintenance, Services, Tracking, Tyres, Roadside Assist',
-        price: 'R7,299'
+        price1500km: 'R7,299',
+        price2500km: 'R7,899'
     },
     {
         image: viewFour,
@@ -51,7 +56,8 @@ const AllCars = () => {
         petrolConsumption: '6.2L/100km',
         engineCapacity: '1.6L',
         offers: 'Insurance, Maintenance, Services, Tracking, Tyres, Roadside Assist',
-        price: 'R14,199'
+        price1500km: 'R14,199',
+        price2500km: 'R14,899'
     },
     {
         image: viewFive,
@@ -60,7 +66,8 @@ const AllCars = () => {
         petrolConsumption: '6.9L/ 100km',
         engineCapacity: '1.5L',
         offers: 'Insurance, Maintenance, Services, Tracking, Tyres, Roadside Assist',
-        price: 'R12,699'
+        price1500km: 'R12,699',
+        price2500km: 'R14,299'
     },
     {
         image: viewSix,
@@ -69,7 +76,8 @@ const AllCars = () => {
         petrolConsumption: '6.8L/ 100km',
         engineCapacity: '1.5L Turbo Petrol',
         offers: 'Insurance, Maintenance, Services, Tracking, Tyres, Roadside Assist',
-        price: 'R13,199'
+        price1500km: 'R13,199',
+        price2500km: '14,699'
     },
     {
         image: viewSeven,
@@ -78,7 +86,8 @@ const AllCars = () => {
         petrolConsumption: '6.8L/ 100km',
         engineCapacity: '1.5L',
         offers: 'Insurance, Maintenance, Services, Tracking, Tyres, Roadside Assist',
-        price: 'R13,699'
+        price1500km: 'R13,699',
+        price2500km: 'R14,999'
     },
     {
         image: viewEight,
@@ -87,7 +96,8 @@ const AllCars = () => {
         petrolConsumption: '7.2L/ 100km',
         engineCapacity: '2.2L',
         offers: 'Insurance, Maintenance, Services, Tracking, Tyres, Roadside Assist',
-        price: 'R17,799'
+        price1500km: 'R17,799',
+        price2500km: 'R18,599'
     },
     {
         image: viewNine,
@@ -96,7 +106,8 @@ const AllCars = () => {
         petrolConsumption: '5L/ 100km',
         engineCapacity: '1.5L',
         offers: 'Insurance, Maintenance, Services, Tracking, Tyres, Roadside Assist',
-        price: 'R9,899'
+        price1500km: 'R9,899',
+        price2500km: '10,499'
     },
     {
         image: viewTen,
@@ -105,7 +116,8 @@ const AllCars = () => {
         petrolConsumption: '6.8L/ 100km',
         engineCapacity: '1.5L',
         offers: 'Insurance, Maintenance, Services, Tracking, Tyres, Roadside Assist',
-        price: 'R12,199'
+        price1500km: 'R13,499',
+        price2500km: 'R14,499'
     },
     {
         image: viewEleven,
@@ -114,7 +126,8 @@ const AllCars = () => {
         petrolConsumption: '5.3L/ 100km',
         engineCapacity: '1.5L',
         offers: 'Insurance, Maintenance, Services, Tracking, Tyres, Roadside Assist',
-        price: 'R9,499'
+        price1500km: 'R9,499',
+        price2500km: 'R9,999'
     },
     {
         image: viewTwelve,
@@ -123,7 +136,8 @@ const AllCars = () => {
         petrolConsumption: '5.3L/ 100km',
         engineCapacity: '1.0L',
         offers: 'Insurance, Maintenance, Services, Tracking, Tyres, Roadside Assist',
-        price: 'R10,099'
+        price1500km: 'R10,099',
+        price2500km: 'R10,899'
     },
     {
         image: viewThirteen,
@@ -132,7 +146,8 @@ const AllCars = () => {
         petrolConsumption: '5.1L/ 100km',
         engineCapacity: '1.5L',
         offers: 'Insurance, Maintenance, Services, Tracking, Tyres, Roadside Assist',
-        price: 'R8,099'
+        price1500km: 'R8,099',
+        price2500km: 'R8,399'
     },
     {
         image: viewFourteen,
@@ -141,17 +156,28 @@ const AllCars = () => {
         petrolConsumption: '5.5L/ 100km',
         engineCapacity: '1.5L',
         offers: 'Insurance, Maintenance, Services, Tracking, Tyres, Roadside Assist',
-        price: 'R9,799'
+        price1500km: 'R9,799',
+        price2500km: 'R10,199'
     },
     ];
+
+    const [selectedPrices, setSelectedPrices] = useState(allCars.map(car => car.price1500km));
+    
+    const handleKilometersClick = (index, kilometers) => {
+        const newPrices = [...selectedPrices];
+        newPrices[index] = kilometers === 1500 ? allCars[index].price1500km : allCars[index].price2500km;
+        setSelectedPrices(newPrices);
+    };
 
     return (
         <div>
         <Navbar />
-        <div className="container featured-vehicles">
-        <h2>All Vehicles - Available Options</h2>
-        {allCars.map((car, index) => (
-            <div key={index} className="col-lg-3 col-md-12 mb-4 car">
+        <h3 className='featured-vehicles'>All Cars - Available Options</h3>
+        <div className="container">
+            <div className='row'>
+
+            {allCars.map((car, index) => (
+                <div key={index} className="col-lg-4 col-md-12 mb-4 car">
                 <div className='card h-100'>
                     <img src={car.image} alt={car.name} className='car-image' />
                     <h3 className="car-name">{car.name}</h3>
@@ -160,24 +186,28 @@ const AllCars = () => {
                         <div className='col-4'>{car.petrolConsumption}</div>
                         <div className='col-4'>{car.engineCapacity}</div>
                     </div>
-                    <p><strong>Offers Include:</strong>{car.offers}</p>
-                    <div className='row'>
+                    <p className='offers-include'><strong>Offers Include: </strong>{car.offers}</p>
+                    <div className='row apply-kilometers'>
                         <div className='col-6'>
-                            <button type="button" className='btn btn-primary'>Apply Now</button>
+                            <button type="button" className='apply-now-featured'>Apply Now</button>
                         </div>
                         <div className='col-6 monthly-kilometers'>
-                            <p>Monthly listeners</p>
+                            <p>Monthly kilometers</p>
                             <span>
-                               <button>1500km</button>
-                               <button>2500km</button>
+                               <button className={setSelectedPrices[index] === car.price1500km ? 'active' : ''} onClick={() => handleKilometersClick(index, 1500)}>
+                               1500km</button>
+                               <button className={setSelectedPrices[index] === car.price2500km ? 'active' : ''} onClick={() => handleKilometersClick(index, 2500)}>
+                               2500km</button>
                             </span>
                         </div>
                     </div>
-                    <div>{car.price} <span>Per Month</span></div>
+                    <div className='price'>{selectedPrices[index]} <span className='per-month'>Per Month</span></div>
                 </div>
             </div>
             ))}
+            </div>
         </div>
+        <Footer />
         </div>
     );
 };
