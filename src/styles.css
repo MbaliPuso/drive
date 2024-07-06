@@ -387,6 +387,82 @@ Body {
     margin-top: 15px;
   }
   
+  /* car details styling */
+  .car-details-page {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .car-details-page h2 {
+    color: #1a3229;
+    margin-bottom: 20px;
+  }
+  
+  .car-detail-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .offers, .specifications {
+    margin-bottom: 20px;
+  }
+  
+  .offers h3, .specifications h3 {
+    color: #ebc035;
+    margin-bottom: 10px;
+  }
+  
+  .offers p, .specifications p {
+    color: #1a3229;
+    margin-bottom: 5px;
+  }
+  
+  /* Form styles */
+  .car-form h3 {
+    color: #1a3229;
+    margin-bottom: 20px;
+  }
+  
+  .car-form .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .car-form label {
+    color: #1a3229;
+  }
+  
+  .car-form input, .car-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .car-form .row .form-group {
+    margin-bottom: 0;
+    padding: 0 10px;
+  }
+  
+  .car-form .btn-warning {
+    background-color: #ebc035;
+    border: none;
+    color: #1a3229;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .car-form .btn-warning:hover {
+    background-color: #d3a929;
+  }
 
 
 

@@ -75,22 +75,28 @@ const CarDetails = () => {
               <option value="no">No</option>
             </select>
           </div>
-          <div className="form-group">
-            <label>First Name:</label>
-            <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} className="form-control" required />
+          
+          <div className='row'>
+            <div className="col form-group">
+                <label>First Name:</label>
+                <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} className="form-control" required />
+            </div>
+            <div className="col form-group">
+                <label>Last Name:</label>
+                <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} className="form-control" required />
+            </div>
           </div>
-          <div className="form-group">
-            <label>Last Name:</label>
-            <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} className="form-control" required />
+          <div className='row'>
+            <div className="col form-group">
+                <label>Email Address:</label>
+                <input type="email" name="email" value={formData.email} onChange={handleChange} className="form-control" required />
+            </div>
+            <div className="col form-group">
+                <label>Phone Number:</label>
+                <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} className="form-control" required />
+            </div>
           </div>
-          <div className="form-group">
-            <label>Email Address:</label>
-            <input type="email" name="email" value={formData.email} onChange={handleChange} className="form-control" required />
-          </div>
-          <div className="form-group">
-            <label>Phone Number:</label>
-            <input type="text" name="phoneNumber" value={formData.phoneNumber} onChange={handleChange} className="form-control" required />
-          </div>
+          
           <button type="submit" className="btn btn-warning">Send Details</button>
         </form>
       </div>
