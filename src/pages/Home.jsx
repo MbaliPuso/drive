@@ -14,7 +14,9 @@ const Home = () => {
            <HeroSection />
            <FeaturedVehicles />
            <QuickApply />
-           <HowItWorks />
+           <section id='how-it-works'>
+            <HowItWorks />
+           </section>
            <PaymentProsCons />
            <Footer />
         </div>
