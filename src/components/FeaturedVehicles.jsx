@@ -1,41 +1,61 @@
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import carOne from "../assets/suzuki-swift.png";
 import carTwo from "../assets/omoda-c5.png";
 import carThree from "../assets/jimny-5-door.png";
 
 const FeaturedVehicles = () => {
+    const navigate = useNavigate();
     const cars = [
         {
             image: carOne,
             name: 'Suzuki Swift 1.2 GL',
-            gearType: '5-Speed Manual',
+            transmission: '5-Speed Manual',
             petrolConsumption: '4.9L/100km',
             engineCapacity: '1.2L',
             offers: 'Insurance, Maintenance, Services, Tracking, Tyres, Roadside Assist',
             price1500km: 'R7,299',
-            price2500km: 'R7,899'
+            price2500km: 'R7,899',
+            brand: 'Suzuki',
+            model: 'Swift 1.2 GL',
+            bodyStyle: 'City Car',
+            seats: 5,
+            doors: 5,
+            driveTrain: 'Front Wheel Drive'
         },
         {
             image: carTwo,
             name: 'Omoda C5 Tech',
-            gearType: 'Electric shift gear',
+            transmission: 'Electric shift gear',
             petrolConsumption: '6.9L/ 100km',
             engineCapacity: '1.5L',
             offers: 'Insurance, Maintenance, Services, Tracking, Tyres, Roadside Assist',
             price1500km: 'R12,699',
-            price2500km: 'R14,299'
+            price2500km: 'R14,299',
+            brand: 'Omoda',
+            model: 'C5 Tech',
+            bodyStyle: 'SUV',
+            seats: 5,
+            doors: 5,
+            driveTrain: '2 Wheel Drive'
         },
         {
             image: carThree,
             name: 'Suzuki Jimny 5 Door 1.5 GLX',
-            gearType: '5-Speed Manual',
+            transmission: '5-Speed Manual',
             petrolConsumption: '6.8L/ 100km',
             engineCapacity: '1.5L',
             offers: 'Insurance, Maintenance, Services, Tracking, Tyres, Roadside Assist',
             price1500km: 'R13,499',
-            price2500km: 'R14,499'
+            price2500km: 'R14,499',
+            brand: 'Suzuki',
+            model: 'Jimny 5 Door 1.5 GLX',
+            bodyStyle: 'SUV',
+            seats: 5,
+            doors: 5,
+            driveTrain: '4 Wheel Drive'
         },
     ];
 
@@ -45,6 +65,10 @@ const FeaturedVehicles = () => {
         const newPrices = [...selectedPrices];
         newPrices[index] = kilometers === 1500 ? cars[index].price1500km : cars[index].price2500km;
         setSelectedPrices(newPrices);
+    };
+
+    const handleApplyNow = (car) => {
+        navigate('/car-details', { state: {car} })
     };
 
     return (
@@ -59,14 +83,14 @@ const FeaturedVehicles = () => {
                     <img src={car.image} alt={car.name} className='car-image' />
                     <h3 className="car-name">{car.name}</h3>
                     <div className='row car-details'>
-                        <div className='col-4'>{car.gearType}</div>
+                        <div className='col-4'>{car.transmission}</div>
                         <div className='col-4'>{car.petrolConsumption}</div>
                         <div className='col-4'>{car.engineCapacity}</div>
                     </div>
                     <p className='offers-include'><strong>Offers Include: </strong>{car.offers}</p>
                     <div className='row apply-kilometers'>
                         <div className='col-6'>
-                            <button type="button" className='apply-now-featured'>Apply Now</button>
+                            <button type="button" className='apply-now-featured' onClick={() => handleApplyNow(car)}>Apply Now</button>
                         </div>
                         <div className='col-6 monthly-kilometers'>
                             <p>Monthly kilometers</p>
