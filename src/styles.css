@@ -46,7 +46,7 @@ Body {
   }
   
   .navbar-toggler {
-    margin-left: auto;
+    margin-right: 7px;
   }
 
   /* Adjust layout for larger screens */
@@ -183,20 +183,52 @@ Body {
     transform: translateY(-2px);
 }
 
+.apply-kilometers {
+  margin: 0 7px;
+}
+
 .monthly-kilometers {
     text-align: right;
+    font-size: 0.80rem;
 }
 
 .monthly-kilometers p {
-    font-size: 0.75;
+    margin-bottom: 5px;
+    padding-bottom: 0;
     color: #555;
 }
 
 .monthly-kilometers button {
+    border: none;
     border-radius: 15px;
     margin-left: 5px;
     margin-top: 0;
     padding-top: 0;
+}
+
+.kilometers-button {
+  cursor: pointer;
+  transition: #1a3229 0.3s ease, whitesmoke 0.3s ease;
+}
+
+.active-1500 {
+  background-color: #1a3229;
+  color: whitesmoke;
+}
+
+.inactive-1500 {
+  background-color: whitesmoke;
+  color: #555;
+}
+
+.active-2500 {
+  background-color: #1a3229;
+  color: whitesmoke;
+}
+
+.inactive-2500 {
+  background-color: whitesmoke;
+  color: #555;
 }
 
 .price {

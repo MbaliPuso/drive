@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../styles.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -95,9 +96,9 @@ const FeaturedVehicles = () => {
                         <div className='col-6 monthly-kilometers'>
                             <p>Monthly kilometers</p>
                             <span>
-                               <button className={setSelectedPrices[index] === car.price1500km ? 'active' : ''} onClick={() => handleKilometersClick(index, 1500)}>
+                               <button className={`kilometers-button ${setSelectedPrices[index] === car.price1500km ? 'active-1500' : 'inactive-1500'}`} onClick={() => handleKilometersClick(index, 1500)}>
                                1500km</button>
-                               <button className={setSelectedPrices[index] === car.price2500km ? 'active' : ''} onClick={() => handleKilometersClick(index, 2500)}>
+                               <button className={`kilometers-button ${setSelectedPrices[index] === car.price2500km ? 'active-2500' : 'inactive-2500'}`} onClick={() => handleKilometersClick(index, 2500)}>
                                2500km</button>
                             </span>
                         </div>
