@@ -321,26 +321,15 @@ Body {
 }
 
 /* how it works section */
-.drive-heading {
-    margin-bottom: 40px;
-}
-
 .how-it-works {
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-/* .how-it-works .card {
-    border: none;
-} */
-
-.card-title {
-    font-size: 24px;
-    font-weight: bold;
-}
-
-.card-text {
-    font-size: 18px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* pros and cons section */
@@ -495,6 +484,61 @@ Body {
   .car-form .btn-warning:hover {
     background-color: #d3a929;
   }
+
+  .apply-now-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: whitesmoke;
+    color: #1a3229;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.apply-now-content {
+    background-color: #1a3229;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.apply-now-form .form-group label {
+    color: #ebc035;
+    font-weight: bold;
+}
+
+.apply-now-form .form-control {
+    border: 2px solid #ebc035;
+    color: #1a3229;
+}
+
+.apply-now-form .btn {
+    background-color: #ebc035;
+    color: #1a3229;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.apply-now-form .row {
+    margin-bottom: 20px;
+}
+
+.apply-now-form .col {
+    padding: 0 10px;
+}
+
+/* apply now navigation bar */
+.apply-navigation {
+    background-color: #1a3229;
+}
+
 
 
 
